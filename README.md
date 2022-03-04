@@ -2,12 +2,14 @@
 
 Retrieve and display the user repositories, gits and organizations in GitHub.
 
-## Server
+## Token
 
 Create a GitHub Access Token in your GitHub account -> Settings -> Developer settings -> Personal access token
 
 Create .env file at the root of the app and add the token: GITHUB_ACCESS_TOKEN=[your token]
 PORT=5000
+
+## Server
 
 ```sh
 $ cd backend
