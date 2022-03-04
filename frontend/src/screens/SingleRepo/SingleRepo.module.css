@@ -1,0 +1,29 @@
+.container {
+  margin: 1em;
+}
+
+.container > button {
+  background: #181716;
+  color: #fff;
+  margin-top: 1em;
+  padding: 0.6em 0;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .container {
+    margin: 2em 4em;
+  }
+  .container > button {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    margin: 3em 8em;
+  }
+  .container > button {
+    width: 100px;
+  }
+}

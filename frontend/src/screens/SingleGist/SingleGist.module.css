@@ -1,0 +1,29 @@
+.gistcontainer {
+  margin: 1em;
+}
+
+.gistcontainer > button {
+  background: #181716;
+  color: #fff;
+  margin-top: 1em;
+  padding: 0.6em 0;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .gistcontainer {
+    margin: 2em 4em;
+  }
+  .gistcontainer > button {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .gistcontainer {
+    margin: 3em 8em;
+  }
+  .gistcontainer > button {
+    width: 100px;
+  }
+}

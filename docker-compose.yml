@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  frontend:
+    container_name: github-search
+    depends_on:
+      - backend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports: 
+      - '1337:80'
+  backend:
+    build: ./backend
+    ports: 
+      - 5000:5000
+    environment:
+      GITHUB_ACCESS_TOKEN: "${GITHUB_ACCESS_TOKEN}"
+      PORT: 5000
