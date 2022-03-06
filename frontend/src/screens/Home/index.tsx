@@ -26,21 +26,15 @@ const Home = () => {
     setUsername(e.target.value)
   }, [])
 
-  const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
-      e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
 
-      if (username) {
-        dispatch(getReposRequest(username))
-        setTimeout(() => {
-          dispatch(getGistsRequest(username))
-          dispatch(getOrganizationsRequest(username))
-        }, 500)
-      }
-      setUsername('')
-    },
-    [dispatch, username]
-  )
+    await Promise.all([
+      dispatch(getReposRequest(username)),
+      dispatch(getGistsRequest(username)), 
+      dispatch(getOrganizationsRequest(username))
+    ])
+  }
 
   return (
     <div className={styles.container}>
