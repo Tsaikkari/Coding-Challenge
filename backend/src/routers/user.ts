@@ -26,7 +26,7 @@ router.get(
       OAuth: process.env.GITHUB_ACCESS_TOKEN,
     }
     https
-      .get(options, function (response) {
+      .get (options, function (response) {
         response.pipe(res)
       })
       .on('error', (err) => {
